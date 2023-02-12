@@ -22,35 +22,6 @@ let person1 = {
 };
 console.log(person1);
 
-// destructuring.
-let anotherPerson = {
-  first: "foo",
-  last: "bar",
-  address: {
-    city: "pune",
-    state: "maharashtra",
-  },
-};
-
-// we can also destructure nested objects also.
-let {
-  first,
-  last,
-  address: { city },
-} = anotherPerson; // here, we are extracting "first" and "last" and "city"  from the above object.
-console.log(first, city, last);
-
-// we can destructure arrays as well.
-const fruits = ["apple", "banana", "kiwi"];
-console.log(fruits[0]);
-
-const [, , kiwi] = fruits;
-console.log(`coming from destructured array! ${kiwi}`);
-
-// alias in destructuring.
-let { first: names } = anotherPerson;
-console.log("aliased as name", names);
-
 // rest operator -> ...=> this is called ellipsis notation.
 const { first: namess, ...rest } = anotherPerson;
 console.log(namess, rest);
@@ -58,7 +29,8 @@ console.log(namess, rest);
 const [apple, ...rem] = fruits;
 console.log(apple, rem);
 
-// spread operator.
+
+// spread operator eg - 2.
 const someMoreFruits = ["guava", "mango", "peach"];
 const moreFruits = [...fruits, ...someMoreFruits];
 console.log(moreFruits);
